@@ -26,7 +26,8 @@ _start:
 	add r6, #1
 	str r6, [r8, #0x004] 	@ seta PAB como saída
 
-	ldr r0, [r8, #0x010]	@ Endereço do registrador de dados
+	ldr r0, [r8, #0x810]	@ Endereço do registrador de dados
+	ldr r0, [r0]		
 	add r1, r0, #1
 	lsl r1, r1, #24
 	str r1, [r0, #0x810]	@ Acende o LED
